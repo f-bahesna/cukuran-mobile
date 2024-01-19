@@ -1,0 +1,8 @@
+{
+  "name": "cukuran-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite",
+  "id": "071b861a"
+}
