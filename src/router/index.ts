@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import TabsPage from '../views/MenuTabs.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,15 +17,15 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'home',
-        component: () => import('@/components/Main/TransactionPage.vue')
+        component: () => import('@/views/TransactionPage.vue')
       },
       {
         path: 'product',
-        component: () => import('@/components/Main/ProductList.vue')
+        component: () => import('@/views/ProductList.vue')
       },
       {
         path: 'user',
-        component: () => import('@/components/Main/MainMenu.vue')
+        component: () => import('@/views/User.vue')
       }
     ]
   }
