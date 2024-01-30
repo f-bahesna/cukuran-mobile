@@ -8,7 +8,7 @@
         <ion-list>
           <ion-item v-for="(product, index) in products.data" :key="index">
             <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+              <img height='60' width='120' :src="product.Image" />
             </ion-thumbnail>
             <ion-label>{{product.Name}}</ion-label>
             <ion-label>{{product.Price}}</ion-label>
@@ -33,7 +33,7 @@ export default defineComponent({
   setup(){
     const products = ref([])
       try {
-        const response = fetch('http://localhost:8080/v1/products', { headers });
+        const response = fetch('https://cukuran.fly.dev/v1/products', { headers });
         response.then((res)=> {
           if(!res.ok){
               throw new Error(`HTTP error! Status: ${res.status}`);
